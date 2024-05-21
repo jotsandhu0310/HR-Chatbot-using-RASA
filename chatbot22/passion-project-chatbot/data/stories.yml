@@ -1,0 +1,139 @@
+version: "3.1"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: Authenticate User
+#   steps:
+#     - intent: greet
+#     - action: utter_greet
+#     - intent: provide_credentials
+#     - action: action_authenticate_user
+#     - slot_was_set:
+#         - authenticated: true
+#     - action: utter_authenticated
+    # Continue with other actions related to queries or actions requiring authentication
+
+# - story: authentication
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   # - intent: request_names
+#   - action: authentication
+#   - active_loop: authentication
+#   - slot_was_set:
+#     - requested_slot: username
+#   - slot_was_set:
+#     - username: Manisha Gupta4
+#   - slot_was_set:
+#     - requested_slot: password
+#   - slot_was_set:
+#     - password: "1500"
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_submit
+#   - action: utter_slots_values
+
+
+# - story: greeting
+#   steps:
+#   - intent: greet
+#   - or :
+#     - slot_was_set:
+#       - name : Manisha
+#     - slot_was_set:
+#       - name : Ramya
+  
+ 
+- story: Authenticate user
+  steps:
+    - intent: greet
+    - action: utter_ask_username
+
+- story: User provides username
+  steps:
+    - intent: username
+    - action: utter_ask_password
+
+- story: User provides password
+  steps:
+    - intent: password
+    - action: action_validate_user
+    # - action: utter_menu
+    # - action: action_handle_menu
+
+# - story: Leave applying
+#   steps:
+#     - intent: leave_apply
+#     - action : utter_start_date
+    
+
+# - story: User provides start date
+#   steps:
+#     - intent : start_date
+#     - action : utter_end_date
+
+# - story: User provides end date
+#   steps:
+#     - intent : end_date
+#     - action : utter_reason
+
+# - story: Providing reason
+#   steps:
+#     - intent : reason
+#     - action: action_apply_leave
+    
+# - story: Salary details
+#   steps:
+#     - intent: salary
+#     - action: utter_salary
+
+# - story: leave
+#   steps:
+#   - intent: leave
+#   - action: utter_leave
+
+# - story: hr_policy
+#   steps:
+#   - intent: hr_policy
+#   - action: utter_hr_policy
+
+# - story: benefits
+#   steps:
+#   - intent: benefits
+#   - action: utter_benefits
+
+# - story: Apply leave without specifying dates
+#   steps:
+#     - intent: leave_apply
+#     - action: leavesapplication_form
+#     - active_loop: leavesapplication_form
+#     - action: validate_leavesapplication_form
+#     - active_loop: null

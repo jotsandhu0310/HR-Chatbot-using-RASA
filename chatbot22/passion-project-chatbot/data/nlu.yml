@@ -1,0 +1,449 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi my name is [Manisha Gupta](name),how are you?
+    - hi my name is [Jot Sandhu](name),how are you?
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: hr_policy/timing
+  examples: |
+    - What is the company's policy on working hours, including regular hours, overtime, and breaks?
+    - What is the company's policy on working hours?
+    - What is the company policy on working hours?
+    - What is the company policy on regular hours?
+    - What is the company policy on overtime?
+    - What is the company policy on breaks?
+
+- intent: chitchat/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have name for yourself?
+
+- intent: chitchat/ask_weather
+  examples: |
+    - How is the weather?
+    - what os the temp today?
+    - how is the outside today?
+    
+
+- intent: leave_type
+  examples: |
+    - What is total leave given in calendar year?
+    - what is total leave for this year?
+    - total type of leaves provided by Sabudh?
+    - Sabudh leaves type?
+    - total leaves?
+    - What is the company's leave policy?
+    - Can you explain the company's leave policy to me?
+    - What are the rules regarding leave in this company?
+    - How many paid leave am I eligible for?
+    - Tell me about the leave policy here.
+    - Can you provide information about maternity or paternity leave policies?
+    - How does the company's leave system work?
+    - Can you provide details about the leave policy of this organization?
+    - What is the official policy on taking leaves?
+    - What are the guidelines for requesting leave?
+    - Explain the leave policy of the company to me.
+    - What are the regulations regarding leave days?
+    - How does leave approval work in this organization?
+    - Can you clarify the leave policy for employees?
+    - What is the standard procedure for applying for leave?
+    - Tell me about the types of leaves available in this company.
+    - What is the maximum duration for a single leave request?
+    - How many sick leave days are allowed per year?
+    - What is the annual leave entitlement for employees?
+    - about annual leave in Sabudh?
+
+    
+
+- intent: leave_status
+  examples: |
+    - How many my leaves are pending?
+    - How many  leaves are pending?
+    - my total leaves left this year?
+    - my total leaves?
+    - what is my total leaves?
+    - How many leave days do I have left?
+    - What is my current leave balance?
+    - Can you tell me how many leave days I have left?
+    - What is my remaining leave balance?
+    - How many days off do I have left?
+    - Can you inform me about my current leave balance?
+    - What's the status of my leave balance?
+    - How much leave time do I have remaining?
+    - Is there a limit to my remaining leave days?
+    - Can you check my available leave days?
+    - What's the number of leave days I can still take?
+    - How much annual leave do I have left?
+    - Am I eligible for more leave days?
+    - Can I know my remaining leave balance?
+    - What's my leave entitlement?
+    - Can I get information on my remaining leave?
+    - Can you check how many leave days I've used so far?
+    - How many leave days do I have left this month?
+
+
+- intent: leave_apply
+  examples: |
+    - I want to apply for my leaves
+    - how can I apply for leaves?
+    - help me to apply for leaves
+    - can you help me to apply leaves?
+    - I want to apply for a leave.
+    - I want to apply for leave. What's the process?
+    - I need to request leave for personal reasons.
+    - I want to take a day off next [day].
+    - I require leave from work due to personal matters.
+    - I need a vacation from [start date] to [end date].
+    - I'd like to request some time off.
+    - May I request a leave of absence?
+    - Could I take a leave starting next week?
+    - Is it possible for me to go on leave?
+    - Can I request a vacation?
+    - I need to take some days off. How can I request leave?
+    - Is there a procedure for requesting leave?
+    - I want to apply for a leave of absence.
+    - I'd like to request leave starting tomorrow.
+    - Could you help me apply for leave?
+    - I need a break from work. Can I take leave?
+    - Can I apply for leave starting immediately?
+    - I need some time off for a family event. How do I request leave?
+    - Can I apply for a vacation leave starting next month?
+
+- intent: start_date
+  examples: |
+    - I want to take a leave from tommorrow
+    - its 11th of march 
+    - from today only
+    - from today itself 
+    - start date is may the 5th this year
+    - on march first 
+    - it will start from friday this week
+ - intent: end_date
+  examples: |
+    - I want to take a leave till day after tommorrow
+    - its 11th of march 
+    - till tommorow 
+    - until first day of next month  
+    - end date is may the 5th this year
+    - up until march first 
+    - it will end on  friday this week
+  - intent: reason
+  examples: |
+    - My reason is :- [vacation](reason)
+    - [vacation](reason)
+    - my reason is :- [paid leave](reason) 
+    - reason is :- [maternity leave](reason)
+    - reason :- [paid leaves](reason)
+    - my reason is [sick leave](reason)
+    - my reason is [casual leave](reason)  
+
+# - intent: leave/vacation
+#   examples: |
+#     - total vacation for this year?
+#     - total vacation for this calendar year?
+#     - number of vacation for this year in Sabudh?
+#     - no of vacation for this year in Sabudh?
+    
+- intent: hr_policy/dress_code
+  examples: |
+    - What is dress code in Sabudh?
+    - Sabudh dress code?
+    - dress code in Sabudh?
+    - dress code Sabudh have?
+    - dress code applies in Sabudh?
+    - is wearing jeans is fine in Sabudh?
+
+- intent: hr_policy/notice_period
+  examples: |
+    - What is notice period in Sabudh?
+    - notice period in Sabudh?
+    - Sabudh notice period?
+    - notice period I need to serve here?
+    - notice period I need to serve in company?
+    - company notice period? 
+    - notice period in company?
+
+- intent: hr_policy/code_conduct
+  examples: |
+    - What is the company's code of conduct?
+    - Can you provide details about our code of conduct?
+    - Tell me about the rules in our code of conduct 
+    - What is the Sabudh's code of conduct?
+    - company's code of conduct?
+    - Sabudh code of conduct?
+    - details about company code of conduct?
+    - details about Sabudh code of conduct?
+    - What does the code of conduct say about conflicts of interest?
+        
+- intent: hr_policy/remote_work
+  examples: |
+    - What are the company's policies regarding remote work?
+    - Can you provide information on the remote work guidelines?
+    - Where can I find details about our remote work policy?  
+    - Am I eligible for remote work, and what are the criteria for approval?
+    - How do I request approval for remote work?
+    - What factors are considered when approving remote work requests?
+    - What equipment and technology does the company provide for remote workers?
+ 
+- intent: hr_policy/harassment
+  examples: |
+    - What are the company's policies regarding remote work?
+    - Can you provide information on the remote work guidelines?
+    - What does the company's policy say about harassment?
+    - Can you provide information about the harassment policy?
+    - Where can I find details about harassment prevention in our policies?
+    - How does the company define harassment?
+    - What behaviors are considered harassment according to our policy?
+    - Is there a list of examples that illustrate what constitutes harassment?
+    - How do I report a harassment incident?
+    - Is there a specific person or department I should contact to report harassment?
+    - What is the procedure for reporting harassment anonymously?
+    - Are there any recent changes to the company's harassment prevention policies?
+    - Is there a way to receive notifications about updates to the harassment policy?
+
+- intent: hr_policy/anti_discrimination
+  examples: |
+   - Can you provide an overview of the company's anti-discrimination policy?
+   - Where can I find information about the company's stance on discrimination?
+   - What is the company doing to ensure a discrimination-free workplace?
+   - What categories are protected under the company's anti-discrimination policy?
+   - Can you specify the characteristics or traits that are safeguarded against discrimination?
+   - Is there a comprehensive list of protected classes in our policy?
+   - How do I report an incident of discrimination in the workplace?
+   - Is there a specific process for filing a discrimination complaint?
+   - Are there confidential channels for reporting discrimination concerns? 
+   - How does the company promote diversity and inclusion to prevent discrimination?
+   - Are there initiatives to create an inclusive workplace culture?
+   - Can you provide examples of inclusive practices within the company?
+
+- intent: hr_policy/probation
+  examples: |
+   - Can you explain the purpose and duration of the probationary period?
+   - What is expected of me during the probation period?
+   - Where can I find information about the company's probation policy?
+   - What are the goals or objectives of the probationary period?
+   - How does the company benefit from having a probationary period?
+   - Is it primarily a performance evaluation period?
+
+- intent: hr_policy/about_company
+  examples: |
+   - Can you provide a brief overview of the company's history and mission?
+   - What are the main products or services that the company offers?
+   - How would you describe the company culture?
+   - Can you explain the organizational structure of the company?
+   - Who are the key executives or leaders in the company?
+   - How are teams and departments organized within the company?
+   - What are the core values that the company emphasizes?
+   - How does the company promote diversity and inclusion?
+   - Is the company expanding into new markets or industries?
+
+- intent: benefits/health_insurance
+  examples: |
+   - Can you provide an overview of the health insurance coverage offered by the company?
+   - What medical services are covered by the health insurance plan?
+   - Are there specific inclusions or exclusions in the health benefits?
+   - How do I find healthcare providers within the network covered by our health plan?
+   - Can I use out-of-network providers, and if so, how does it affect coverage?
+   - Are there any changes to the provider network compared to previous years?
+   - Sabudh health insurance policy?
+   - What is the monthly premium for my health insurance plan?
+   - What out-of-pocket costs can I expect, such as copayments and deductibles?
+   - Are there any additional fees or costs associated with the plan?
+
+- intent: benefits/term_insurance
+  examples: |
+   - Can you provide an overview of the term insurance coverage offered by the company?
+   - detail about term insurance?
+   - amount coverage in term insurance?
+   - is term insurance is paid or free in Sabudh?
+   - is term insurance is paid or free in company?
+   - term insurance coverage in Sabudh?
+   - company term insurance?
+   - term insurance provided by Sabudh?
+   - term insurance provided by company?
+
+- intent: benefits/pf
+  examples: |
+   - How are the funds in my PF account invested?
+   - Can I choose the investment options for my PF?
+   - How does the PF contribute to my retirement planning?
+   - Are there any retirement-related benefits associated with PF?
+   - how can I check my pf amount?
+   - Whom should I contact for PF-related queries?
+   - Is there a customer support service for PF-related issues?
+
+- intent: benefits/gratuity
+  examples: |
+   - Am I eligible for gratuity?
+   - Does the company provide gratuity to all employees?
+   - What are the criteria for receiving gratuity?
+   - Does part-time work count towards gratuity eligibility?
+   - How long do I need to work at the company to be eligible for gratuity?
+   - Is there a vesting period for gratuity?
+   - Does the duration of employment affect the gratuity amount?
+   - When will I receive my gratuity after leaving the company?
+   - Is gratuity payment made monthly or as a lump sum?
+   - How is gratuity taxed?
+   - Is there any tax exemption on gratuity?
+
+- intent: benefits/dental
+  examples: |
+   - Are there any specific dental procedures not covered by the insurance?
+   - Are pre-existing dental conditions covered?
+   - Is emergency dental treatment covered under our insurance?
+   - What should I do in case of a dental emergency while traveling?
+   - When does the dental insurance plan renew or reset?
+   - Are there any changes in coverage or premiums expected for the upcoming year?
+   - Can I make changes to my coverage mid-year?
+
+- intent: salary
+  examples: |
+   - What is my current salary?
+   - current salary?
+   - current salary
+   - my current salary?
+   - my current salary
+   - salary please
+
+- intent: username
+  examples: |
+    - My username is [Ignace Ormonde](username)
+    - Username: [Ignace Ormonde](username)
+    - [Shubham Gupta](username)
+    - my username is [Enrique Lewer](username)
+    - [Wallie Byrd](username)
+    - [Hannah Ganter](username)
+    - [Rossie McGonnell](username)
+    - [Annamarie Powderham](username)
+    - [Gabriela Balcon](username)
+    - [Ignace Ormonde](username)
+
+- intent: password
+  examples: |
+    - Password: [12345](password)
+    - The password is [12345](password)
+    - [abc](password)
+    - [95674](password)
+    - my password is [879jk](password)
+    - password is [jkl90](password)
+    - [90879078](password)
+    - [jhklo](password)
+    - [jhklmnvf](password)
+    - [980789jh](password)
+    - [87967](password)
+
+# - intent: reason
+#   examples:
+#     - Reason : 
+# - intent: authentication_me
+#   examples: |
+#    - I want to authenticate myself
+#    - authenticate me
+#    - please authenticate
+#    - authenticate please
+
+# - intent: request_names
+#   examples: |
+#     - i want to give you my name
+#     - give name
+#     - you need to know my name
+#     - do you know my name?
+
+
+- intent: thankyou
+  examples: |
+    - thanks alot
+    - thank you soo much
+    - thanks
+    - thanks bro  
+

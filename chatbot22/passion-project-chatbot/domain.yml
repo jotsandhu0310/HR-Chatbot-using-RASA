@@ -1,0 +1,226 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - leave_status # total leaves left for year
+  - leave_apply
+  - leave_type
+  - hr_policy
+  - user_info
+  - benefits
+  - training
+  - salary
+  #- faq
+  - chitchat
+  # - authentication_me
+  - username
+  - password
+  - start_date
+  - end_date
+  - reason
+  - thankyou
+
+
+slots:
+  username:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: username
+
+  password:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: password
+
+  reason:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: reason
+
+  start_date:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: time
+
+  end_date:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: time
+
+  # employee_user:
+  #   type: bool
+  #   influence_conversation: false
+
+entities :
+  - name
+  - username
+  - password
+  - reason
+  - start_date
+  - end_date
+  - time
+  - thankyou
+
+forms:
+  leavesapplication_form:
+    required_slots:
+        - start_date
+        - end_date
+        - reason
+      
+   
+
+  
+actions:
+  - action_validate_user
+  # - action_handle_menu
+  - action_get_salary
+  - action_status_for_leave
+  - action_apply_leave
+  - action_leaves_submit
+  - validate_leavesapplication_form
+
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey {name}! How are you?"
+  
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a Sahayak, your HR chatbot."
+
+  utter_chitchat/ask_name:
+  - text: "My name is Sahayak!! Your Sabudh HR chatbot"
+
+  utter_chitchat/ask_weather:
+  - text: "It is sunny"
+
+  utter_leave_type:
+  - text: "There are 24 paid leaves annualy and 14 holidays "
+
+  utter_hr_policy/timing:
+  - text: "The timing will be general time from 10 AM IST to 6 PM IST including 1 hour break."
+  - text : "We currently dont have any overtime policy and allowance for it."
+
+  utter_hr_policy/dress_code:
+  - text: "Dress code is formal business attire"
+
+  utter_hr_policy/notice_period:
+  - text: "Notice period is 60 days"
+
+  utter_hr_policy/code_conduct:
+  - text: "Please find the link for code of conduct:- https://sabudh.org/wp-content/themes/hello-theme-child-master/sabudh-brochure-2023.pdf"
+
+  utter_hr_policy/remote_work:
+  - text: "It is hybrid model with 3 days from office and 2 days from home. "
+
+  utter_hr_policy/harassment:
+  - text: "Please find the link of the Sabudh harassment policy:- https://sabudh.org/ "
+
+  utter_hr_policy/anti_discrimination:
+  - text: "Please find the link of the Sabudh anti_discrimination policy:- https://sabudh.org/ "
+
+  utter_hr_policy/probation:
+  - text: "The probation period is 30 days "
+
+  utter_hr_policy/about_company:
+  - text: "Please click on link to visit the official page of Sabudh :- https://sabudh.org/  "
+
+  utter_benefits/health_insurance:
+  - text: "Please find the link below for health insurance :- https://www.acko.com/ "
+
+  utter_thankyou:
+  - text: "Welcome,Have a nice day."
+
+  utter_benefits/term_insurance:
+  - text: "Please find the link below for term insurance :- https://www.acko.com/"
+
+  utter_benefits/pf:
+  - text: "Please find the link below for pf:- https://unifiedportal-mem.epfindia.gov.in/memberinterface/  "
+
+  utter_benefits/gratuity:
+  - text: " Kindly contact your HRBP regarding gratuity "
+
+  utter_benefits/dental:
+  - text: "Please find the link below for dental insurance:- https://www.acko.com/ "
+
+  utter_ask_username :
+  - text : "What is your username?"
+
+  utter_ask_password :
+  - text : "What is your password?"
+
+  utter_ask_leavesapplication_form_start_date :
+  - text : " Sure!! What is the start date of your leave?"
+
+  utter_ask_leavesapplication_form_end_date :
+  - text : "What is the end date of your leave?"
+
+  utter_ask_leavesapplication_form_reason :
+  - text : "What is the reason of your leave?"
+  
+  # utter_submit:
+  # - text: Yay ! Your leave application form is submitted .
+  
+  utter_slots_values:
+  - text: I will remember that your name is {username} !
+
+
+  
+
+ 
+  #   buttons:
+  #     - title: "Leave"
+  #       payload: "/leave"
+  #     - title: "HR Policy"
+  #       payload: "/hr_policy"
+  #     - title: "Benefits"
+  #       payload: "/benefits"
+  #     - title: "Training"
+  #       payload: "/training"
+  #     - title: "Salary"
+  #       payload: "/salary"
+
+
+
+  
+
+
+  
+
+
+  
+    
+
+
+ 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

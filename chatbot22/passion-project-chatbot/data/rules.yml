@@ -1,0 +1,82 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a Sahayak' your virtual HR assistant
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# - rule: respond to FAQs
+#   steps:
+#   - intent: faq
+#   - action: utter_faq
+
+- rule: respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: leave_status
+  steps:
+  - intent: leave_status
+  - action: action_status_for_leave
+
+# - rule: leave_apply
+#   steps:
+#   - intent: leave_apply
+#   - action: action_apply_leave
+
+- rule: leave_type
+  steps:
+  - intent: leave_type
+  - action: utter_leave_type
+
+- rule: hr_policy
+  steps:
+  - intent: hr_policy
+  - action: utter_hr_policy
+
+- rule: benefits
+  steps:
+  - intent: benefits
+  - action: utter_benefits
+
+- rule: salary
+  steps:
+  - intent: salary
+  - action: action_get_salary
+
+- rule: thank you
+  steps:
+  - intent: thankyou
+  - action: utter_thankyou
+
+- rule: leave_application
+  steps:
+  - intent: leave_apply
+  - action: leavesapplication_form
+  - active_loop: leavesapplication_form
+  
+
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: leavesapplication_form
+  steps:
+  # Form is deactivated
+  - action: leavesapplication_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_leaves_submit
+  
+  
+
+

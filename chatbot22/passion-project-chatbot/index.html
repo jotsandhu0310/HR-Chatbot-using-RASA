@@ -1,0 +1,92 @@
+<html>
+    <body>
+        <style>
+        .rw-conversation-container {
+          height: "100%";
+          width:"100%;"
+        }
+
+        .rw-conversation-container .rw-header {
+          background-color: #000000; 
+        }
+        .rw-conversation-container .rw-title {
+          color: rgb(255, 255, 255);  
+          align-self: center;
+        }
+        .rw-conversation-container .rw-messages-container{
+          background-color: #ece8e8;
+        }
+        .rw-conversation-container .rw-messages-container::-webkit-scrollbar {
+          width: 10px;
+          background-color: #dedddd; /* scrollbar background */
+        }
+
+        .rw-conversation-container .rw-messages-container::-webkit-scrollbar-thumb {
+          background-color: #000000; /* scrollbar thumb (the one you drag) */
+        }
+        .rw-conversation-container .rw-messages-container .rw-message .rw-response {
+        
+          background-color: #ffffff; 
+          color: #000000; 
+          font-weight:500;
+          line-height: 160%;
+          font-family: sans-serif;
+
+
+        }
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client {
+          background-color: #000000; 
+          color: #ffffff; 
+        }
+        .rw-conversation-container .rw-sender {
+          background-color: #000000; 
+        }
+        .rw-conversation-container .rw-sender .rw-new-message{
+          color: #000000; 
+        }
+        .rw-conversation-container .rw-sender .rw-new-message{
+          background-color: #000000; 
+          color:#ffffff;
+          
+        }
+        .rw-launcher{
+          background-color: #000000; 
+
+        }
+        .rw-send {
+
+          background-color: #000000  !important;
+        }
+        .rw-send-icon-ready {
+          fill: #ffffff !important;
+        }
+        </style>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    initPayload:'/greet',
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005",
+                    title: "Sahayak Chatbot",
+                    profileAvatar: "logo.png",
+                    params: {
+                      storage: "session"
+                    },
+                    showMessageDate: true,
+                    displayUnreadCount: true,
+                    autoFocus: true, 
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+    </body>
+</html>

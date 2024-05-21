@@ -1,0 +1,154 @@
+[{
+  "_id": {
+    "$oid": "657f041392e1d940e073a14e"
+  },
+  "id": 1408,
+  "name": "Ignace Ormonde",
+  "salary": 1500000,
+  "password": "12345",
+  "username": "Ignace Ormonde",
+  "leaves": 24
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a14f"
+  },
+  "id": 1249,
+  "name": "Gabriela Balcon",
+  "salary": 1600000,
+  "password": "87967",
+  "username": "Gabriela Balcon",
+  "leaves": 20
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a150"
+  },
+  "id": 1158,
+  "name": "Enrique Lewer",
+  "salary": 1400000,
+  "password": "95674",
+  "username": "Enrique Lewer",
+  "leaves": 18
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a151"
+  },
+  "id": 1564,
+  "name": "Wallie Byrd",
+  "salary": 1450000,
+  "password": "879jk",
+  "username": "Wallie Byrd",
+  "leaves": 23
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a152"
+  },
+  "id": 1334,
+  "name": "Hannah Ganter",
+  "salary": 1550000,
+  "password": "jkl90",
+  "username": "Hannah Ganter",
+  "leaves": 14
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a153"
+  },
+  "id": 1713,
+  "name": "Hannah Ganter",
+  "salary": 1575000,
+  "password": "jhklo",
+  "username": "Hannah Ganter",
+  "leaves": 11
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a154"
+  },
+  "id": 1499,
+  "name": "Theobald Crosston",
+  "salary": 1585000,
+  "password": "90879078",
+  "username": "Theobald Crosston",
+  "leaves": 15
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a155"
+  },
+  "id": 1090,
+  "name": "Delmer Chiplen",
+  "salary": 1700000,
+  "password": "8976yu",
+  "username": "Delmer Chiplen",
+  "leaves": 22
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a156"
+  },
+  "id": 1839,
+  "name": "Adeline Diwell",
+  "salary": 1300000,
+  "password": "9ikl076",
+  "username": "Adeline Diwell",
+  "leaves": 14
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a157"
+  },
+  "id": 1119,
+  "name": "Annamarie Powderham",
+  "salary": 1350000,
+  "password": "980789jh",
+  "username": "Annamarie Powderham",
+  "leaves": 17
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a158"
+  },
+  "id": 1076,
+  "name": "Rossie McGonnell",
+  "salary": 1350000,
+  "username": "Rossie McGonnell",
+  "password": "jhklmnvf",
+  "leaves": 24
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a159"
+  },
+  "id": 1730,
+  "name": "Francesco Trendle",
+  "salary": 1395000,
+  "password": "9084567",
+  "username": "Francesco Trendle",
+  "leaves": 19
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a15a"
+  },
+  "id": 1362,
+  "name": "Steffie Ferraretto",
+  "salary": 1200000,
+  "password": "98kjihmnh",
+  "username": "Steffie Ferraretto",
+  "leaves": 17
+},
+{
+  "_id": {
+    "$oid": "657f041392e1d940e073a15b"
+  },
+  "id": 1489,
+  "name": "Rosita Katzmann",
+  "salary": 1200000,
+  "password": "768545677",
+  "username": "Rosita Katzmann",
+  "leaves": 8
+}]
